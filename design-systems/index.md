@@ -7,12 +7,6 @@
 
 
 * В процессе ...
-<!-- 
-* [Лабораторная работа №1]({{ site.baseurl }}/design-systems/labs/lab1) Анализ требований и постановка задачи
-* [Лабораторная работа №2]({{ site.baseurl }}/design-systems/labs/lab2) Проектирование архитектуры системы
-* [Лабораторная работа №3]({{ site.baseurl }}/design-systems/labs/lab3) Диаграммы UML
-* [Лабораторная работа №4]({{ site.baseurl }}/design-systems/labs/lab4) Проектирование пользовательского интерфейса
--->
 ___
 
 ### [Требования на допуск]({{ site.baseurl }}/design-systems/labs/min)
@@ -22,4 +16,5 @@ ___
 ___
 
 ## Литература
+
 
