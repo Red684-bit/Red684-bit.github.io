@@ -42,10 +42,9 @@
 </div>
 </div>
 
-<br>
-
 <div class="row justify-content-center">
 <div class="col-auto">
 <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ site.baseurl }}/development-systems/';">Разработка кода информационных систем</button>
 </div>
 </div>
+
