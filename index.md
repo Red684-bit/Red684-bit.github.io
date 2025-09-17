@@ -10,8 +10,8 @@
 
 <br>
 
-<div class="row row-cols-1 row-cols-md-2">
-<div class="col-lg-4">
+<div class="row justify-content-center">
+<div class="col-auto">
 <div class="card border-primary mb-2" style="max-width: 20rem;">
   <div class="card-body">
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Kramskoi_Christ_dans_le_d%C3%A9sert.jpg"
@@ -36,8 +36,16 @@
 
 <br>
 
+<div class="row justify-content-center">
+<div class="col-auto">
 <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ site.baseurl }}/design-systems/';">Проектирование и дизайн информационных систем</button>
+</div>
+</div>
 
-<br><br>
+<br>
 
+<div class="row justify-content-center">
+<div class="col-auto">
 <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ site.baseurl }}/development-systems/';">Разработка кода информационных систем</button>
+</div>
+</div>
