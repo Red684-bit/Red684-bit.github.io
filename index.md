@@ -76,6 +76,6 @@
 
 <br>
 
-<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ site.baseurl }}/design-systems/index.html';">Проектирование и дизайн информационных систем</button>
+<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ site.baseurl }}/design-systems/';">Проектирование и дизайн информационных систем</button>
 
-<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ site.baseurl }}/development-systems/index.html';">Разработка кода информационных систем</button>
+<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ site.baseurl }}/development-systems/';">Разработка кода информационных систем</button>

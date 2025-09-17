@@ -5,20 +5,20 @@
 
 # Проектирование и дизайн информационных систем
 
-* [Лабораторная работа №1]({{ site.baseurl }}/design-systems/labs/lab1.html) Анализ требований и постановка задачи
-* [Лабораторная работа №2]({{ site.baseurl }}/design-systems/labs/lab2.html) Проектирование архитектуры системы
-* [Лабораторная работа №3]({{ site.baseurl }}/design-systems/labs/lab3.html) Диаграммы UML
-* [Лабораторная работа №4]({{ site.baseurl }}/design-systems/labs/lab4.html) Проектирование пользовательского интерфейса
-* [Лабораторная работа №5]({{ site.baseurl }}/design-systems/labs/lab5.html) Проектирование базы данных
-* [Лабораторная работа №6]({{ site.baseurl }}/design-systems/labs/lab6.html) Проектирование API
-* [Лабораторная работа №7]({{ site.baseurl }}/design-systems/labs/lab7.html) Тестирование и валидация дизайна
-* [Лабораторная работа №8]({{ site.baseurl }}/design-systems/labs/lab8.html) Документирование проекта
+* [Лабораторная работа №1]({{ site.baseurl }}/design-systems/labs/lab1) Анализ требований и постановка задачи
+* [Лабораторная работа №2]({{ site.baseurl }}/design-systems/labs/lab2) Проектирование архитектуры системы
+* [Лабораторная работа №3]({{ site.baseurl }}/design-systems/labs/lab3) Диаграммы UML
+* [Лабораторная работа №4]({{ site.baseurl }}/design-systems/labs/lab4) Проектирование пользовательского интерфейса
+* [Лабораторная работа №5]({{ site.baseurl }}/design-systems/labs/lab5) Проектирование базы данных
+* [Лабораторная работа №6]({{ site.baseurl }}/design-systems/labs/lab6) Проектирование API
+* [Лабораторная работа №7]({{ site.baseurl }}/design-systems/labs/lab7) Тестирование и валидация дизайна
+* [Лабораторная работа №8]({{ site.baseurl }}/design-systems/labs/lab8) Документирование проекта
 
 ___
 
-### [Требования на допуск]({{ site.baseurl }}/design-systems/labs/min.html)
+### [Требования на допуск]({{ site.baseurl }}/design-systems/labs/min)
 
-### [Вопросы к экзамену]({{ site.baseurl }}/design-systems/labs/exam.html)
+### [Вопросы к экзамену]({{ site.baseurl }}/design-systems/labs/exam)
 
 ___
 
