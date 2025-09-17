@@ -18,13 +18,9 @@ ___
 
 ### [Требования на допуск]({{ site.baseurl }}/development-systems/labs/min)
 
-### [Вопросы к экзамену]({{ site.baseurl }}/development-systems/labs/exam)
+<!-- ### [Вопросы к экзамену]({{ site.baseurl }}/development-systems/labs/exam) -->
 
 ___
 
 ## Литература
 
-* [Рихтер Д. CLR via C#. Программирование на платформе Microsoft .NET Framework 4.5 на языке C# (2012 пер. 2013)](https://vk.com/doc170999522_485454911?hash=qmYk8crGz5P9CeUEbj9R5emFlaFQbeX79EbKXRZLhEH){:target="_blank"}
-* [metanit по C#](https://metanit.com/sharp/tutorial/){:target="_blank"}
-* [Тепляков С. Паттерны проектирования на платформе .NET (2015)](https://vk.com/doc44301783_411162088?hash=rN8STM9Ih1GjFaY6jANlsmpZEtSTWbsmAH7Rb1uKapz&dl=u7D5v4wwlR3ddUzzQGDOozsyEuIwYEHH2hWgBEu7z8H){:target="_blank"}
-* [RefactoringGuru](https://refactoring.guru/design-patterns/csharp){:target="_blank"}
