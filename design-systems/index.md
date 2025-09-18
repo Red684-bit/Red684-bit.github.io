@@ -1,5 +1,5 @@
 <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="{{ site.baseurl }}">Главная</a></li>
+  <li class="breadcrumb-item"><a href="{{ site.baseurl }}/index">Главная</a></li>
   <li class="breadcrumb-item active">Проектирование и дизайн информационных систем</li>
 </ol>
 
