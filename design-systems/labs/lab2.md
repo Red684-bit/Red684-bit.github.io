@@ -29,10 +29,13 @@
 
 - ***Многие-ко-многим (M:N)*** - Каждый экземпляр сущности A связан с несколькими экземплярами B, и наоборот.
 
-#### Пример логической модели:
+#### Пример логической модели и реляционной схемы:
 <div class="card border-primary mb-2" style="max-width: 40rem;">
   <div class="card-body">
     <img src="{{ site.baseurl }}/img/Лог_модель.png"
+        alt="FCN" focusable="false" width="100%"
+        class="d-block user-select-none" />
+    <img src="{{ site.baseurl }}/img/Рел_схема.png"
         alt="FCN" focusable="false" width="100%"
         class="d-block user-select-none" />
   </div>
