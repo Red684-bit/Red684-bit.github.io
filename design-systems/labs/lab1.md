@@ -1,5 +1,5 @@
 <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="{{ site.baseurl }}">Главная</a></li>
+  <li class="breadcrumb-item"><a href="{{ site.baseurl }}/index">Главная</a></li>
   <li class="breadcrumb-item"><a href="{{ site.baseurl }}/design-systems/index">Проектирование и дизайн ИС</a></li>
   <li class="breadcrumb-item active">ЛР №1</li>
 </ol>
@@ -25,9 +25,6 @@
  <div class="row">
    <div class="col-lg-12">
      <ul class="list-unstyled">
-       <li class="float-end">
-         <button type="button" class="btn btn-outline-primary" onclick="window.location.href='#Лабораторная работа №1: Описание предметной области';">Вверх</button>
-       </li>
        <li class="float-end">
          <button type="button" class="btn btn-primary" onclick="window.location.href='{{ site.baseurl }}/design-systems/labs/lab2';">ЛР №2 →</button>
        </li>
