@@ -7,6 +7,9 @@
 
 
 * В процессе ...
+
+* [Лабораторная работа №1]({{ site.baseurl }}/design-systems/labs/lab1) Описание предметной области
+
 ___
 
 ### [Требования на допуск]({{ site.baseurl }}/design-systems/labs/min)
