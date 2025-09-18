@@ -35,9 +35,6 @@
     <img src="{{ site.baseurl }}/img/Лог_модель.png"
         alt="FCN" focusable="false" width="100%"
         class="d-block user-select-none" />
-    <img src="{{ site.baseurl }}/img/Рел_схема.png"
-        alt="FCN" focusable="false" width="100%"
-        class="d-block user-select-none" />
   </div>
 </div>
 
@@ -93,4 +90,5 @@
       </li>
     </ul>
   </div>
+
 </div>
