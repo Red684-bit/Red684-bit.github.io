@@ -85,6 +85,9 @@
 <div class="row">
   <div class="col-lg-12">
     <ul class="list-unstyled">
+        <li class="float-end">
+         <button type="button" class="btn btn-primary" onclick="window.location.href='{{ site.baseurl }}/design-systems/labs/lab3';">ЛР №3 →</button>
+       </li>
       <li>
         <button type="button" class="btn btn-primary" onclick="window.location.href='{{ site.baseurl }}/design-systems/labs/lab1';">← ЛР №1</button>
       </li>
