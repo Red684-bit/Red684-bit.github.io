@@ -7,6 +7,7 @@
 
 * [Лабораторная работа №1]({{ site.baseurl }}/design-systems/labs/lab1) Описание предметной области
 * [Лабораторная работа №2]({{ site.baseurl }}/design-systems/labs/lab2) Создание логической модели
+* [Лабораторная работа №3]({{ site.baseurl }}/design-systems/labs/lab3) Создание моделей базы данных django
 
 ___
 
