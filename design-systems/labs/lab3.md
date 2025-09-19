@@ -35,6 +35,44 @@
 
 ___
 
+### Авторы
+``` python
+class Author(models.Model):
+    name = models.CharField(max_length=100) # Текстовое поле ввода
+    email = models.EmailField(unique=True) # Поле ввода почты
+
+    def __str__(self):
+        return self.name
+```
+
+### Категория
+```python
+class Category(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
+
+    class Meta:
+        verbose_name = "Категория" # Название объекта класса в ед.ч.
+        verbose_name_plural = "Категории" # Название объекта класса в мн.ч.
+
+    def __str__(self):
+        return self.name
+```
+
+### Статья
+```python
+class Article(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    pub_date = models.DateTimeField(auto_now_add=True)
+    is_published = models.BooleanField(default=False)
+
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='articles') # Связь внешним ключом с сущностью Автор
+    categories = models.ManyToManyField(Category, related_name='articles') # Связь многие ко многим с сущностью Категория
+
+    def __str__(self):
+        return self.title
+```
 ___
 
 После определения модель необходимо обязательно создать и применить миграции базы данных:
@@ -68,4 +106,5 @@ admin.site.register(Author)
       </li>
     </ul>
   </div>
+
 
