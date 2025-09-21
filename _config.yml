@@ -3,7 +3,7 @@ description: Поставлю автомат первому, кто найдет
 
 repository:  Red684-bit/Red684-bit.github.io  
 
-higlighter: rouge
+highlighter: rouge
 
 plugins:
   - jekyll-tabs
