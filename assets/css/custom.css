@@ -346,23 +346,4 @@
   }
 }
 
-/* Dark theme support */
-[data-bs-theme="dark"] .progress-section {
-  background: #1a1a1a;
-}
 
-[data-bs-theme="dark"] .progress-card,
-[data-bs-theme="dark"] .course-card {
-  background: #2d2d2d;
-  border-color: #404040;
-}
-
-[data-bs-theme="dark"] .section-title,
-[data-bs-theme="dark"] .course-title,
-[data-bs-theme="dark"] .progress-title {
-  color: var(--text-light);
-}
-
-[data-bs-theme="dark"] .course-description {
-  color: #adb5bd;
-}

@@ -34,13 +34,11 @@
         MathJax = {tex: {inlineMath: [['$', '$']]}};
     </script>
     <script>
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.setAttribute('data-bs-theme', 'dark')
-			}
+      // Принудительно светлая тема
+      document.documentElement.setAttribute('data-bs-theme', 'light')
     </script>
     
     <script src="{{ site.baseurl }}/assets/js/main.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/switch.js"></script>
     <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>
 
     <!--[if lt IE 9]>
@@ -50,10 +48,6 @@
     
   </head>
   <body>
-    <script>
-      const getStoredTheme = () => localStorage.getItem('theme');
-      getStoredTheme();
-    </script>
     <div class="wrapper">
       <div class="container-fluid px-0">
         <!-- Modern Header -->
@@ -103,8 +97,6 @@
       document.addEventListener('DOMContentLoaded', function() {
         // Add loading animation
         document.body.classList.add('loading');
-        
-        // Theme switching is handled by switch.js
         
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

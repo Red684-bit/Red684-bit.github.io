@@ -11,10 +11,6 @@
   transition: all 0.3s ease;
 }
 
-[data-bs-theme="dark"] .modern-header {
-  background: rgba(33, 37, 41, 0.95);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-}
 
 .navbar-brand {
   text-decoration: none;
@@ -85,10 +81,6 @@
   margin-top: 4rem;
 }
 
-[data-bs-theme="dark"] .modern-footer {
-  background: var(--bs-dark);
-  border-top-color: rgba(255, 255, 255, 0.1);
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -99,6 +91,7 @@
   .brand-text {
     font-size: 1.25rem;
   }
+  
 }
 
 /* Smooth scrolling */
