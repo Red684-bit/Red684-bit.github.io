@@ -1,0 +1,862 @@
+/* Construction & Ancient Greek Architecture Style Lab 2 CSS */
+
+/* CSS Variables */
+:root {
+  --greek-primary: #2C3E50;
+  --greek-secondary: #34495E;
+  --greek-accent: #E67E22;
+  --greek-gold: #F39C12;
+  --greek-marble: #F8F9FA;
+  --greek-stone: #6C7B7F;
+  --greek-dark: #2C3E50;
+  --greek-bronze: #CD7F32;
+  --greek-shadow: 0 4px 20px rgba(44, 62, 80, 0.15);
+  --greek-shadow-hover: 0 8px 30px rgba(44, 62, 80, 0.25);
+  --greek-gradient: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  --greek-gold-gradient: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+  --greek-marble-gradient: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+  --greek-column-gradient: linear-gradient(180deg, #F8F9FA 0%, #E9ECEF 50%, #DEE2E6 100%);
+}
+
+/* Greek Temple Hero Section */
+.construction-hero {
+  background: var(--greek-gradient);
+  color: white;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.construction-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><defs><pattern id="greek-pattern" x="0" y="0" width="40" height="100" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="40" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="20" cy="20" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="50" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="80" r="3" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="200" height="100" fill="url(%23greek-pattern)"/></svg>');
+  opacity: 0.2;
+}
+
+.construction-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: var(--greek-gold-gradient);
+  border-top: 3px solid var(--greek-bronze);
+}
+
+.construction-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.construction-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid var(--greek-gold);
+  border-radius: 0;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  color: var(--greek-gold);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.construction-hero-badge::before {
+  content: '🏛️';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.construction-hero-badge::after {
+  content: '🏛️';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.construction-hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.construction-hero-title::before {
+  content: '⚡';
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: var(--greek-gold);
+}
+
+.construction-hero-title::after {
+  content: '⚡';
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: var(--greek-gold);
+}
+
+.construction-hero-subtitle {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Parthenon Section (Theory) */
+.foundation-section {
+  padding: 100px 0;
+  background: var(--greek-marble-gradient);
+  position: relative;
+}
+
+.foundation-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--greek-gold-gradient);
+  border-bottom: 2px solid var(--greek-bronze);
+}
+
+.foundation-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="marble-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(44,62,80,0.05)"/><circle cx="10" cy="10" r="1" fill="rgba(44,62,80,0.03)"/><circle cx="40" cy="40" r="1.5" fill="rgba(44,62,80,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23marble-pattern)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.foundation-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.foundation-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--greek-primary);
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.foundation-title::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 8px;
+  background: var(--greek-gold-gradient);
+  border-radius: 0;
+  border: 2px solid var(--greek-bronze);
+}
+
+.foundation-title::before {
+  content: '🏺';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+
+.foundation-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--greek-shadow);
+  border: 3px solid var(--greek-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.foundation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--greek-gold-gradient);
+  border-bottom: 2px solid var(--greek-bronze);
+}
+
+.foundation-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 100"><rect x="8" y="0" width="4" height="100" fill="rgba(44,62,80,0.05)"/><circle cx="10" cy="10" r="1" fill="rgba(44,62,80,0.1)"/><circle cx="10" cy="30" r="1" fill="rgba(44,62,80,0.1)"/><circle cx="10" cy="50" r="1" fill="rgba(44,62,80,0.1)"/><circle cx="10" cy="70" r="1" fill="rgba(44,62,80,0.1)"/><circle cx="10" cy="90" r="1" fill="rgba(44,62,80,0.1)"/></svg>');
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.foundation-card-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--greek-gold-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--greek-primary);
+  position: relative;
+  box-shadow: var(--greek-shadow);
+}
+
+.foundation-card-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--greek-primary);
+  margin-bottom: 1rem;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.foundation-card-description {
+  color: var(--greek-dark);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.foundation-card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.foundation-card-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--greek-dark);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.foundation-card-list li::before {
+  content: '🏺';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/* Blueprint Section (ER Diagram) */
+.blueprint-section {
+  padding: 100px 0;
+  background: var(--greek-marble);
+  position: relative;
+}
+
+.blueprint-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--greek-gold-gradient);
+  border-bottom: 2px solid var(--greek-bronze);
+}
+
+.blueprint-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blueprint-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--greek-primary);
+  margin-bottom: 2rem;
+  position: relative;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blueprint-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 6px;
+  background: var(--greek-gold-gradient);
+  border-radius: 0;
+  border: 2px solid var(--greek-bronze);
+}
+
+.blueprint-title::before {
+  content: '📐';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+
+.blueprint-description {
+  color: var(--construction-dark);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.blueprint-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 2rem;
+}
+
+.blueprint-image {
+  border-radius: 20px;
+  box-shadow: var(--greek-shadow-hover);
+  transition: all 0.3s ease;
+  width: 140%;
+  max-width: 140%;
+  height: auto;
+  border: 4px solid var(--greek-primary);
+  margin-bottom: 3rem;
+  margin-left: -20%;
+  margin-right: -20%;
+}
+
+.blueprint-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--greek-shadow-hover);
+}
+
+/* Construction Section (Practice) */
+.construction-section {
+  padding: 100px 0;
+  background: var(--greek-marble-gradient);
+  position: relative;
+}
+
+.construction-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--greek-gold-gradient);
+  border-bottom: 2px solid var(--greek-bronze);
+}
+
+.construction-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600"><defs><pattern id="column-pattern" x="0" y="0" width="60" height="600" patternUnits="userSpaceOnUse"><rect x="25" y="0" width="10" height="600" fill="rgba(44,62,80,0.1)"/><circle cx="30" cy="50" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="100" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="150" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="200" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="250" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="300" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="350" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="400" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="450" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="500" r="3" fill="rgba(44,62,80,0.2)"/><circle cx="30" cy="550" r="3" fill="rgba(44,62,80,0.2)"/><rect x="20" y="0" width="20" height="20" fill="rgba(243,156,18,0.3)"/><rect x="20" y="580" width="20" height="20" fill="rgba(243,156,18,0.3)"/></pattern></defs><rect x="0" y="0" width="60" height="600" fill="url(%23column-pattern)"/><rect x="340" y="0" width="60" height="600" fill="url(%23column-pattern)"/></svg>');
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.construction-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.construction-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--greek-primary);
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.construction-title::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 8px;
+  background: var(--greek-gold-gradient);
+  border-radius: 0;
+  border: 2px solid var(--greek-bronze);
+}
+
+.construction-title::before {
+  content: '⚒️';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+
+.construction-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--greek-shadow);
+  border: 3px solid var(--greek-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.construction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--greek-gold-gradient);
+  border-bottom: 2px solid var(--greek-bronze);
+}
+
+.construction-card-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--greek-gold-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--greek-primary);
+  box-shadow: var(--greek-shadow);
+}
+
+.construction-card-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--greek-primary);
+  margin-bottom: 1rem;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.construction-card-description {
+  color: var(--greek-dark);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.construction-card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.construction-card-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--greek-dark);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.construction-card-list li::before {
+  content: '🔨';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/* Reference Table (Architectural Specifications) */
+.specifications-section {
+  padding: 100px 0;
+  background: var(--greek-marble);
+  position: relative;
+}
+
+.specifications-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--greek-gold-gradient);
+  border-bottom: 2px solid var(--greek-bronze);
+}
+
+.specifications-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.specifications-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--greek-primary);
+  margin-bottom: 2rem;
+  position: relative;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.specifications-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 6px;
+  background: var(--greek-gold-gradient);
+  border-radius: 0;
+  border: 2px solid var(--greek-bronze);
+}
+
+.specifications-title::before {
+  content: '📊';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+
+.specifications-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--greek-shadow);
+  border: 4px solid var(--greek-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.specifications-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--greek-gold-gradient);
+  border-bottom: 2px solid var(--greek-bronze);
+}
+
+.specifications-table {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--greek-shadow);
+  border: 2px solid var(--greek-accent);
+}
+
+.specifications-table thead {
+  background: var(--greek-gold-gradient);
+  color: var(--greek-primary);
+}
+
+.specifications-table th {
+  border: none;
+  padding: 1.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.specifications-table td {
+  border: 1px solid var(--greek-accent);
+  padding: 1.2rem;
+  vertical-align: middle;
+  color: var(--greek-dark);
+  font-size: 1rem;
+}
+
+.specifications-table tbody tr:hover {
+  background: var(--greek-marble);
+  transition: background 0.3s ease;
+}
+
+/* Navigation */
+.construction-navigation {
+  padding: 50px 0;
+  background: var(--greek-gradient);
+  border-top: 4px solid var(--greek-gold);
+}
+
+.nav-btn {
+  background: var(--greek-gold-gradient);
+  color: var(--greek-primary);
+  border: 3px solid var(--greek-primary);
+  border-radius: 50px;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--greek-shadow);
+  font-family: 'Times New Roman', serif;
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--greek-shadow-hover);
+  color: var(--greek-primary);
+  text-decoration: none;
+  background: var(--greek-marble);
+}
+
+.nav-btn-prev {
+  margin-right: 1.5rem;
+}
+
+.nav-btn-next {
+  margin-left: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .construction-hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .construction-hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .foundation-title,
+  .construction-title {
+    font-size: 2.2rem;
+  }
+  
+  .blueprint-title,
+  .specifications-title {
+    font-size: 2rem;
+  }
+  
+  .foundation-card,
+  .construction-card {
+    padding: 2rem;
+  }
+  
+  .blueprint-card,
+  .specifications-card {
+    padding: 2rem;
+  }
+  
+  .blueprint-image {
+    border-radius: 15px;
+    border: 3px solid var(--greek-primary);
+    width: 120%;
+    max-width: 120%;
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+  
+  /* На планшетах убираем пустую колонку */
+  .blueprint-content .col-md-2 {
+    display: none;
+  }
+  
+  .blueprint-content .col-md-5 {
+    flex: 0 0 50%;
+    max-width: 100%;
+  }
+  
+  .nav-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .nav-btn-prev,
+  .nav-btn-next {
+    margin: 0.5rem;
+  }
+  
+  /* Скрыть колонны на планшетах */
+  .construction-section::after {
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-hero {
+    padding: 80px 0;
+  }
+  
+  .construction-hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .foundation-section,
+  .blueprint-section,
+  .construction-section,
+  .specifications-section {
+    padding: 80px 0;
+  }
+  
+  .foundation-title,
+  .construction-title {
+    font-size: 1.8rem;
+  }
+  
+  .blueprint-title,
+  .specifications-title {
+    font-size: 1.6rem;
+  }
+  
+  .foundation-card,
+  .construction-card {
+    padding: 1.5rem;
+  }
+  
+  .blueprint-card,
+  .specifications-card {
+    padding: 1.5rem;
+  }
+  
+  .blueprint-image {
+    border-radius: 10px;
+    border: 2px solid var(--greek-primary);
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* На мобильных делаем изображения в полную ширину */
+  .blueprint-content .col-md-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  /* Полностью скрыть колонны на мобильных */
+  .construction-section::after {
+    display: none;
+  }
+}

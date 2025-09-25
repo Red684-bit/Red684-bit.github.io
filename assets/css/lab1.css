@@ -1,0 +1,442 @@
+/* Book Style Lab 1 CSS */
+
+/* CSS Variables */
+:root {
+  --book-primary: #2c3e50;
+  --book-secondary: #34495e;
+  --book-accent: #e74c3c;
+  --book-gold: #f39c12;
+  --book-light: #ecf0f1;
+  --book-dark: #2c3e50;
+  --book-shadow: 0 4px 20px rgba(44, 62, 80, 0.1);
+  --book-shadow-hover: 0 8px 30px rgba(44, 62, 80, 0.15);
+  --book-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --book-gold-gradient: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+/* Book Hero Section */
+.book-hero {
+  background: var(--book-gradient);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="book-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23book-pattern)"/></svg>');
+  opacity: 0.3;
+}
+
+.book-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.book-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-hero-subtitle {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Chapter Section */
+.chapter-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.chapter-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--book-primary);
+}
+
+.chapter-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--book-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.chapter-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--book-gold-gradient);
+  border-radius: 2px;
+}
+
+.chapter-text {
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+.chapter-text:first-child {
+  text-indent: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--book-secondary);
+}
+
+.chapter-highlight {
+  background: linear-gradient(120deg, rgba(243, 156, 18, 0.1) 0%, rgba(243, 156, 18, 0.05) 100%);
+  border-left: 4px solid var(--book-gold);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  position: relative;
+}
+
+.chapter-highlight::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 4rem;
+  color: var(--book-gold);
+  font-family: 'Times New Roman', serif;
+  line-height: 1;
+}
+
+.chapter-highlight::after {
+  content: '"';
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  font-size: 4rem;
+  color: var(--book-gold);
+  font-family: 'Times New Roman', serif;
+  line-height: 1;
+}
+
+/* Analysis Cards */
+.analysis-section {
+  padding: 80px 0;
+  background: var(--book-light);
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.analysis-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--book-shadow);
+  border: 1px solid rgba(44, 62, 80, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.analysis-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--book-gold-gradient);
+}
+
+.analysis-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--book-shadow-hover);
+}
+
+.analysis-card-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--book-gold-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.analysis-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--book-primary);
+  margin-bottom: 1rem;
+}
+
+.analysis-card-description {
+  color: var(--book-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.analysis-card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.analysis-card-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--book-secondary);
+  line-height: 1.5;
+}
+
+.analysis-card-list li::before {
+  content: '📖';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+}
+
+/* Example Section */
+.example-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.example-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.example-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--book-primary);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.example-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--book-gold-gradient);
+  border-radius: 2px;
+}
+
+.example-description {
+  font-size: 1.1rem;
+  color: var(--book-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.example-image {
+  border-radius: 15px;
+  box-shadow: var(--book-shadow);
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.example-image:hover {
+  transform: scale(1.02);
+}
+
+/* Navigation */
+.book-navigation {
+  padding: 40px 0;
+  background: var(--book-light);
+  border-top: 1px solid rgba(44, 62, 80, 0.1);
+}
+
+.nav-btn {
+  background: var(--book-gradient);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--book-shadow);
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--book-shadow-hover);
+  color: white;
+  text-decoration: none;
+}
+
+.nav-btn-prev {
+  margin-right: 1rem;
+}
+
+.nav-btn-next {
+  margin-left: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .book-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .chapter-title {
+    font-size: 2rem;
+  }
+  
+  .chapter-content {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .analysis-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .analysis-card {
+    padding: 1.5rem;
+  }
+  
+  .example-title {
+    font-size: 1.8rem;
+  }
+  
+  .nav-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .nav-btn-prev,
+  .nav-btn-next {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-hero {
+    padding: 60px 0;
+  }
+  
+  .book-hero-title {
+    font-size: 2rem;
+  }
+  
+  .chapter-section,
+  .analysis-section,
+  .example-section {
+    padding: 60px 0;
+  }
+  
+  .chapter-content {
+    font-size: 0.95rem;
+  }
+  
+  .analysis-card {
+    padding: 1rem;
+  }
+}
